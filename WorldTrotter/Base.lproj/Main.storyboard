@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HTA-f5-XTQ">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--CelsiusDegrees-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WorldTrotter" customModuleProvider="target" sceneMemberID="viewController">
@@ -22,7 +22,11 @@
                                 <rect key="frame" x="96" y="29" width="183" height="88"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="70"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                <connections>
+                                    <action selector="updatedDegree:" destination="BYZ-38-t0r" eventType="editingChanged" id="4hG-mq-Tvg"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="WqJ-6o-G2H"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="degrees Fehrenheit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hLA-jw-9zU">
                                 <rect key="frame" x="59" y="134" width="256" height="37"/>
@@ -50,6 +54,7 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="hLA-jw-9zU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="10P-Sq-ecp"/>
                             <constraint firstItem="tTk-e2-8Zv" firstAttribute="top" secondItem="WmE-dx-Yty" secondAttribute="bottom" constant="38" id="55e-Ig-F9E"/>
@@ -63,9 +68,54 @@
                             <constraint firstItem="hLA-jw-9zU" firstAttribute="top" secondItem="gva-9d-obq" secondAttribute="bottom" constant="17" id="ywy-dG-bdF"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="ngc-8s-3FG" appends="YES" id="Nij-SO-DpC"/>
+                        </connections>
                     </view>
+                    <tabBarItem key="tabBarItem" title="CelsiusDegrees" id="nHO-5A-JN3"/>
+                    <connections>
+                        <outlet property="celsiusLabel" destination="WmE-dx-Yty" id="DRB-ml-dpT"/>
+                        <outlet property="textField" destination="gva-9d-obq" id="HEp-xW-eER"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="ngc-8s-3FG">
+                    <connections>
+                        <action selector="dismissKeyboard:" destination="BYZ-38-t0r" id="HQo-qQ-fy7"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="964" y="30.134932533733135"/>
+        </scene>
+        <!--Map-->
+        <scene sceneID="nPN-gM-M1l">
+            <objects>
+                <viewController id="E30-LA-QZl" sceneMemberID="viewController">
+                    <mapView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" id="Gpj-IO-UrL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    </mapView>
+                    <tabBarItem key="tabBarItem" title="Map" id="ZwZ-HB-4UF"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LSS-TA-UDl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1607.2" y="29.23538230884558"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="JaC-jQ-oqA">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="HTA-f5-XTQ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qPh-7m-fL6">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="MUD-C5-DAJ"/>
+                        <segue destination="E30-LA-QZl" kind="relationship" relationship="viewControllers" id="Z8R-Bt-FSQ"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AwA-li-gkE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="24.800000000000001" y="30.134932533733135"/>
         </scene>
