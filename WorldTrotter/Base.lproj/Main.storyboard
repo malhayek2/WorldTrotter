@@ -72,7 +72,7 @@
                             <outletCollection property="gestureRecognizers" destination="ngc-8s-3FG" appends="YES" id="Nij-SO-DpC"/>
                         </connections>
                     </view>
-                    <tabBarItem key="tabBarItem" title="CelsiusDegrees" selectedImage="ConvertIcon" id="nHO-5A-JN3"/>
+                    <tabBarItem key="tabBarItem" title="CelsiusDegrees" image="ConvertIcon" selectedImage="ConvertIcon" id="nHO-5A-JN3"/>
                     <connections>
                         <outlet property="celsiusLabel" destination="WmE-dx-Yty" id="DRB-ml-dpT"/>
                         <outlet property="textField" destination="gva-9d-obq" id="HEp-xW-eER"/>
@@ -95,7 +95,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     </mapView>
-                    <tabBarItem key="tabBarItem" title="Map" selectedImage="MapIcon" id="ZwZ-HB-4UF"/>
+                    <tabBarItem key="tabBarItem" title="Map" image="MapIcon" selectedImage="MapIcon" id="ZwZ-HB-4UF"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LSS-TA-UDl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -122,7 +122,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="ConvertIcon" width="49" height="33"/>
-        <image name="MapIcon" width="49" height="33"/>
+        <image name="ConvertIcon" width="48" height="32"/>
+        <image name="MapIcon" width="48" height="32"/>
     </resources>
 </document>
