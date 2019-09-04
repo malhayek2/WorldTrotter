@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5CFC273B2320456400F030E2 /* MapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CFC273A2320456400F030E2 /* MapController.swift */; };
 		C243E6752135A08F002057D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C243E6742135A08F002057D9 /* AppDelegate.swift */; };
 		C243E6772135A08F002057D9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C243E6762135A08F002057D9 /* ViewController.swift */; };
 		C243E67A2135A08F002057D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C243E6782135A08F002057D9 /* Main.storyboard */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5CFC273A2320456400F030E2 /* MapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapController.swift; sourceTree = "<group>"; };
 		C243E6712135A08F002057D9 /* WorldTrotter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorldTrotter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C243E6742135A08F002057D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C243E6762135A08F002057D9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 				C243E67B2135A096002057D9 /* Assets.xcassets */,
 				C243E67D2135A096002057D9 /* LaunchScreen.storyboard */,
 				C243E6802135A096002057D9 /* Info.plist */,
+				5CFC273A2320456400F030E2 /* MapController.swift */,
 			);
 			path = WorldTrotter;
 			sourceTree = "<group>";
@@ -205,13 +208,16 @@
 				TargetAttributes = {
 					C243E6702135A08F002057D9 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1030;
 					};
 					C243E6842135A096002057D9 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1030;
 						TestTargetID = C243E6702135A08F002057D9;
 					};
 					C243E68F2135A096002057D9 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1030;
 						TestTargetID = C243E6702135A08F002057D9;
 					};
 				};
@@ -269,6 +275,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C243E6772135A08F002057D9 /* ViewController.swift in Sources */,
+				5CFC273B2320456400F030E2 /* MapController.swift in Sources */,
 				C243E6752135A08F002057D9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -450,7 +457,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.dixie.cs3020.example.WorldTrotter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -467,7 +474,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.dixie.cs3020.example.WorldTrotter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -486,7 +493,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.dixie.cs3020.example.WorldTrotterTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WorldTrotter.app/WorldTrotter";
 			};
@@ -506,7 +513,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.dixie.cs3020.example.WorldTrotterTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WorldTrotter.app/WorldTrotter";
 			};
@@ -525,7 +532,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.dixie.cs3020.example.WorldTrotterUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = WorldTrotter;
 			};
@@ -544,7 +551,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.dixie.cs3020.example.WorldTrotterUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = WorldTrotter;
 			};
